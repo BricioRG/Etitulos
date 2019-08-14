@@ -1,0 +1,45 @@
+{
+  "generator-jhipster": {
+    "applicationType": "uaa",
+    "gitCompany": "",
+    "baseName": "Etitulos",
+    "packageName": "etitulos.se",
+    "packageFolder": "etitulos/se",
+    "serverPort": 8079,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
+    "enableSwaggerCodegen": "true",
+    "messageBroker": "kafka",
+    "buildTool": "maven",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "enableTranslation": true,
+    "nativeLanguage": "es",
+    "languages": [
+      "es"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "6.2.0",
+    "jwtSecretKey": "NGNiODU5MzE3MjUwNzg3OTIzMzYwNDJhZGFhMmI2ODBiMWY5NWZmOGY4N2IzMGVkNDY2NDIzZWE0NmQwZDQxMTEzYzFkMjY4ZTQwYWFiZjY3YTFiZGFhNWNiODZmZGQ0MDQwMGE4YmNhMTdmNjI5NDA3ZjU1MDU1ZmVjMGQyZTY=",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "blueprints": [],
+    "skipClient": true
+  },
+  "git-provider": "GitHub",
+  "git-company": "BricioRG",
+  "repository-name": "Etitulos"
+}

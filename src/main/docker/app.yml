@@ -1,0 +1,33 @@
+version: '2'
+services:
+  etitulos-app:
+    image: etitulos
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://etitulos-postgresql:5432/Etitulos
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+      - SPRING_DATA_JEST_URI=http://etitulos-elasticsearch:9200
+      - SPRING_ELASTICSEARCH_REST_URIS=http://etitulos-elasticsearch:9200
+      - SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS=kafka:9092
+      - SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS=kafka:9092
+  etitulos-postgresql:
+    extends:
+      file: postgresql.yml
+      service: etitulos-postgresql
+  etitulos-elasticsearch:
+    extends:
+      file: elasticsearch.yml
+      service: etitulos-elasticsearch
+  kafka:
+    extends:
+      file: kafka.yml
+      service: kafka
+    environment:
+      - KAFKA_ADVERTISED_HOST_NAME=kafka
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+  zookeeper:
+    extends:
+      file: kafka.yml
+      service: zookeeper
